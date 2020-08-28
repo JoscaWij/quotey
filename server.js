@@ -1,5 +1,6 @@
 const express = require("express");
 const { fetchQuotes } = require("./src/api/quotes");
+require("dotenv").config();
 const app = express();
 const port = 3004;
 
