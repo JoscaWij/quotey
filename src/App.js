@@ -5,6 +5,10 @@ function App() {
   return (
     <div>
       <Form />
+      <section>
+        <button>Get Quote</button>
+        <span>HERE QUOTY YOU HOPEFULLY WILL SEE</span>
+      </section>
     </div>
   );
 }
