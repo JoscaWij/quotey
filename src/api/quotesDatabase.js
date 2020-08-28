@@ -1,4 +1,4 @@
-export async function fetchQuotes() {
+async function fetchQuotes() {
   const response = await fetch("http://localhost:3004/quotes");
 
   if (!response.ok) {
@@ -9,3 +9,5 @@ export async function fetchQuotes() {
 
   return data;
 }
+
+exports.fetchQuotes = fetchQuotes;
