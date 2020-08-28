@@ -4,7 +4,7 @@ import { fetchQuotes } from "./api/quotesDatabase";
 import List from "./components/List";
 
 function App() {
-  const [quotes, setQuotes] = React.useState("");
+  const [quotes, setQuotes] = React.useState([]);
 
   async function handleClick() {
     const allQuotes = await fetchQuotes();
