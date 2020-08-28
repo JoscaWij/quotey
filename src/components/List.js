@@ -4,7 +4,10 @@ function List({ quotes }) {
   return (
     <div>
       {quotes?.map((quotes) => (
-        <span>{quotes}</span>
+        <span key={quotes.text}>
+          {quotes.text}
+          {quotes.author}
+        </span>
       ))}
     </div>
   );
