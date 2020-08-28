@@ -1,10 +1,12 @@
 const express = require("express");
+const { fetchQuotes } = require("./src/api/quotes");
 const app = express();
 const port = 3004;
 
 async function main() {
-  app.get("/quotes", (request, response) => {
-    response.send("All quotes");
+  app.get("/quotes", async (request, response) => {
+    const quotes = await fetchQuotes();
+    response.send(quotes);
   });
 
   app.get("/", (request, response) => {
