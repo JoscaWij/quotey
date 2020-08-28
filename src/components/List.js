@@ -1,13 +1,11 @@
 import React from "react";
+import ListItem from "./ListItem";
 
 function List({ quotes }) {
   return (
     <div>
       {quotes?.map((quotes) => (
-        <span key={quotes.text}>
-          {quotes.text}
-          {quotes.author}
-        </span>
+        <ListItem key={quotes.text} quotes={quotes} />
       ))}
     </div>
   );
