@@ -1,5 +1,5 @@
 const express = require("express");
-const { fetchQuotes } = require("./src/api/quotes");
+const { fetchOriginalQuotes } = require("./src/api/quotes");
 const { MongoClient } = require("mongodb");
 const bodyParser = require("body-parser");
 require("dotenv").config();
@@ -17,7 +17,7 @@ async function main() {
   app.use(bodyParser.json());
 
   app.get("/quotes", async (request, response) => {
-    const quotes = await fetchQuotes();
+    const quotes = await fetchOriginalQuotes();
     response.send(quotes);
   });
 

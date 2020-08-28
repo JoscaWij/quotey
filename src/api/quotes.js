@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-async function fetchQuotes() {
+async function fetchOriginalQuotes() {
   const response = await fetch("https://type.fit/api/quotes");
 
   if (!response.ok) {
@@ -12,4 +12,4 @@ async function fetchQuotes() {
   return data;
 }
 
-exports.fetchQuotes = fetchQuotes;
+exports.fetchOriginalQuotes = fetchOriginalQuotes;
